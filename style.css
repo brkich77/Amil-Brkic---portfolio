@@ -1,0 +1,202 @@
+:root {
+  --bg: #0a0c10;
+  --panel: #0f1218;
+  --text: #eaeaf0;
+  --muted: #9aa0aa;
+  --accent: #5da9ff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(10,12,16,0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  z-index: 100;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1.2rem 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Space Grotesk";
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+nav a {
+  color: var(--muted);
+  margin-left: 2rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--text);
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 6rem 6%;
+}
+
+section {
+  margin-bottom: 7rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero h1 {
+  font-family: "Space Grotesk";
+  font-size: 3.6rem;
+}
+
+.role {
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+.hero-desc {
+  margin-top: 2rem;
+  max-width: 560px;
+  line-height: 1.9;
+}
+
+/* Avatar Container */
+.avatar-container {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.avatar-container:hover {
+  transform: scale(1.1);
+}
+
+.avatar-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h2 {
+  font-family: "Space Grotesk";
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about p,
+.journey p,
+.stack-note {
+  max-width: 760px;
+  line-height: 2;
+  margin-bottom: 1.4rem;
+  color: var(--text);
+}
+
+.stack-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.stack-group .stack-item span {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(93,169,255,0.35);
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.secondary .stack-item span {
+  opacity: 0.7;
+}
+
+.contact p {
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+.contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: var(--accent);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .avatar-container {
+    margin: auto;
+  }
+
+  nav a {
+    margin-left: 1rem;
+  }
+}
+
+.stack-item {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(93,169,255,0.35);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  gap: 0.5rem;
+  color: var(--text);
+}
+
+.tech-logo {
+  width: 20px;
+  height: 20px;
+}
+
+.python-logo {
+  width: 32px;  
+  height: 20px; 
+  object-fit: contain;
+}
