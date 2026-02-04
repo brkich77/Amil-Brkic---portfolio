@@ -86,7 +86,6 @@ section {
   line-height: 1.9;
 }
 
-/* Avatar Container */
 .avatar-container {
   width: 180px;
   height: 180px;
@@ -200,3 +199,4 @@ h2 {
   height: 20px; 
   object-fit: contain;
 }
+
